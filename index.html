@@ -17,12 +17,25 @@
 </head>
 <body>
   
-
+<div class="main-wrapper">
   <div id="app">
 
-      <h1>Il messaggio è: {{messaggio}}</h1>
-      <img :src="image">
+      <h1>Domanda: {{messaggio}}</h1>
+      <h1 :class="isCorrect ? 'green' : '' ">Risposta: {{modello}}</h1>
+  
+      <input type="radio" id="model3" value="Model 3" v-model="modello">
+      <label for="model3">Model 3</label><br>
+
+      <input type="radio" id="modely" value="Model Y" v-model="modello">
+      <label for="modely">Model Y</label><br>
+
+      <input type="radio" id="modelx" value="Model X" v-model="modello">
+      <label for="modelx">Model X</label>
+
+      <br><img :src="image">
   </div>
+
+</div>
 
 
 
